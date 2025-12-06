@@ -1,0 +1,23 @@
+# --- .NET Backend (File rác khi build C#) ---
+backend/**/bin/
+backend/**/obj/
+backend/**/.vs/
+backend/**/*.user
+backend/**/appsettings.Development.json
+
+# --- React Frontend (Thư viện nặng và file build) ---
+frontend/**/node_modules/
+frontend/**/dist/
+frontend/**/build/
+frontend/**/.env
+frontend/**/.env.local
+frontend/**/.DS_Store
+
+# --- SQL Data (Dữ liệu thật của Database - Quan trọng) ---
+sql-data/
+*.mdf
+*.ldf
+
+# --- Logs & System ---
+*.log
+Thumbs.db
