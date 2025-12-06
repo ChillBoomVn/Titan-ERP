@@ -6,11 +6,11 @@ services:
     restart: always
     environment:
       - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=Password123!@# # Mật khẩu phải mạnh (chữ hoa, thường, số, ký tự đặc biệt)
+      - MSSQL_SA_PASSWORD=Password123!@#
     ports:
       - "1433:1433"
     volumes:
-      - ./sql-data:/var/opt/mssql/data
+      - sqlvolume:/var/opt/mssql/data  # Sửa: Dùng named volume để tránh lỗi quyền hạn
 
   # 2. Backend API
   nexus-api:
@@ -23,8 +23,10 @@ services:
       - "5000:8080"
     environment:
       - ConnectionStrings__DefaultConnection=Server=nexus-db;Database=NexusERP;User Id=sa;Password=Password123!@#;TrustServerCertificate=True;
+      - RedisConnection=nexus-redis:6379 # Sửa: Thêm dấu gạch ngang (-) ở đây
     depends_on:
       - nexus-db
+      - nexus-redis # Sửa: API cần đợi cả Redis nữa
 
   # 3. Frontend Web
   nexus-web:
@@ -37,3 +39,17 @@ services:
       - "3000:80"
     depends_on:
       - nexus-api
+
+  # 4. Redis (Sửa: Đưa ra ngoài cho thẳng hàng với các service khác)
+  nexus-redis:
+    image: redis:alpine
+    container_name: nexus_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data # Sửa: Map volume để giữ cache khi restart
+
+volumes:
+  sqlvolume:
+  redisdata:

@@ -1,0 +1,37 @@
+name: Nexus CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 1. Đăng nhập Docker Hub (Dùng 2 cái Secret bạn vừa tạo)
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    # 2. Build Backend và đẩy lên Docker Hub
+    - name: Build & Push Backend API
+      uses: docker/build-push-action@v4
+      with:
+        context: ./backend/Nexus
+        file: ./backend/Nexus/Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/nexus-api:latest
+
+    # 3. Build Frontend và đẩy lên Docker Hub
+    - name: Build & Push Frontend
+      uses: docker/build-push-action@v4
+      with:
+        context: ./frontend
+        file: ./frontend/Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/nexus-web:latest
