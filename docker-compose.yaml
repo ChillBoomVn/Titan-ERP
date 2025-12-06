@@ -1,0 +1,39 @@
+services:
+  # 1. Database SQL Server
+  nexus-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: nexus_db
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password123!@# # Mật khẩu phải mạnh (chữ hoa, thường, số, ký tự đặc biệt)
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./sql-data:/var/opt/mssql/data
+
+  # 2. Backend API
+  nexus-api:
+    build:
+      context: ./backend/Nexus
+      dockerfile: Dockerfile
+    container_name: nexus_api
+    restart: always
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=nexus-db;Database=NexusERP;User Id=sa;Password=Password123!@#;TrustServerCertificate=True;
+    depends_on:
+      - nexus-db
+
+  # 3. Frontend Web
+  nexus-web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nexus_web
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - nexus-api
