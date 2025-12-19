@@ -1,13 +1,362 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusERP - Hệ thống Quản trị Doanh nghiệp Toàn diện</title>
+    <link rel="stylesheet" href="js/tooplate-strategic-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">   
+                <div class="logo-icon">◆</div>
+                <span>NexusERP</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#services">Tính năng</a></li>
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="#team">Đội ngũ</a></li>
+                <li><a href="#testimonials">Khách hàng</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#">Đăng nhập</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="geometric-shapes">
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+            <div class="geo-shape"></div>
+        </div>
+        <div class="hero-content">
+            <h1 id="hero-headline">Quản Trị Tinh Gọn<br>Bứt Phá Doanh Thu</h1>
+            <p id="hero-paragraph">NexusERP mang đến giải pháp quản trị tổng thể "All-in-One": Từ Kho vận, Bán hàng, Nhân sự đến Tài chính. Tự động hóa quy trình để bạn tập trung vào tăng trưởng.</p>
+            <a href="#contact" class="cta-button">Dùng thử Miễn phí</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section services-container">
+            <h2 class="section-title fade-in">Hệ Sinh Thái NexusERP</h2>
+            <div class="services-layout">
+                <div class="services-content">
+                    <div class="service-details active" data-service="strategy">
+                        <h3>Quản Lý Kho Vận</h3>
+                        <div class="service-subtitle">Kiểm soát tồn kho chính xác theo thời gian thực</div>
+                        <p>Loại bỏ nỗi lo thất thoát hàng hóa. Hệ thống quản lý kho thông minh giúp bạn theo dõi từng mã SKU, lô hàng và hạn sử dụng ngay trên màn hình điện thoại.</p>
+                        <p>Tối ưu hóa quy trình nhập - xuất - kiểm kê với công nghệ mã vạch và định vị kho bãi thông minh.</p>
+                        <ul class="service-features">
+                            <li><span class="feature-check">✓</span> Cập nhật tồn kho Real-time</li>
+                            <li><span class="feature-check">✓</span> Quản lý đa chi nhánh/kho hàng</li>
+                            <li><span class="feature-check">✓</span> Cảnh báo hàng sắp hết/cận date</li>
+                            <li><span class="feature-check">✓</span> Tích hợp máy quét Barcode/QR</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-details" data-service="digital">
+                        <h3>Bán Hàng & POS</h3>
+                        <div class="service-subtitle">Bán hàng đa kênh - Thanh toán siêu tốc</div>
+                        <p>Hệ thống POS mạnh mẽ giúp nhân viên thao tác bán hàng chỉ trong vài giây. Đồng bộ đơn hàng từ cửa hàng vật lý đến các sàn TMĐT.</p>
+                        <p>Tích hợp sẵn các cổng thanh toán QR, ví điện tử và quản lý công nợ khách hàng chi tiết.</p>
+                        <ul class="service-features">
+                            <li><span class="feature-check">✓</span> Giao diện POS bán hàng tối ưu</li>
+                            <li><span class="feature-check">✓</span> Đồng bộ đơn hàng Omnichannel</li>
+                            <li><span class="feature-check">✓</span> Quản lý chính sách giá & khuyến mãi</li>
+                            <li><span class="feature-check">✓</span> Tích hợp vận chuyển & thanh toán</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-details" data-service="performance">
+                        <h3>Tài Chính Kế Toán</h3>
+                        <div class="service-subtitle">Minh bạch dòng tiền - Báo cáo tự động</div>
+                        <p>Không cần chờ đến cuối tháng mới biết lãi lỗ. NexusERP cung cấp bức tranh tài chính toàn diện tức thì ngay khi giao dịch phát sinh.</p>
+                        <p>Tự động hạch toán doanh thu, chi phí, quản lý công nợ phải thu/phải trả và dòng tiền mặt.</p>
+                        <ul class="service-features">
+                            <li><span class="feature-check">✓</span> Báo cáo Lãi/Lỗ (P&L) tức thì</li>
+                            <li><span class="feature-check">✓</span> Quản lý thu chi & Sổ quỹ</li>
+                            <li><span class="feature-check">✓</span> Theo dõi công nợ đối tác</li>
+                            <li><span class="feature-check">✓</span> Xuất hóa đơn điện tử tự động</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-details" data-service="market">
+                        <h3>Nhân Sự & Tiền Lương</h3>
+                        <div class="service-subtitle">Quản trị nguồn nhân lực hiệu quả</div>
+                        <p>Số hóa quy trình chấm công, tính lương và quản lý hồ sơ nhân sự. Giảm thiểu sai sót thủ công và tăng sự hài lòng của nhân viên.</p>
+                        <p>Hệ thống phân quyền chặt chẽ, đảm bảo bảo mật thông tin và KPI được theo dõi sát sao.</p>
+                        <ul class="service-features">
+                            <li><span class="feature-check">✓</span> Chấm công GPS/FaceID</li>
+                            <li><span class="feature-check">✓</span> Tính lương & Thưởng tự động</li>
+                            <li><span class="feature-check">✓</span> Quản lý hồ sơ & Hợp đồng</li>
+                            <li><span class="feature-check">✓</span> Đánh giá hiệu suất (KPI)</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-details" data-service="innovation">
+                        <h3>Mua Hàng & NCC</h3>
+                        <div class="service-subtitle">Tối ưu chi phí đầu vào</div>
+                        <p>Quản lý quy trình mua hàng từ lúc đề xuất đến khi nhập kho. So sánh giá nhà cung cấp để tối ưu chi phí vốn.</p>
+                        <p>Lưu trữ lịch sử nhập hàng và đánh giá chất lượng nhà cung cấp định kỳ.</p>
+                        <ul class="service-features">
+                            <li><span class="feature-check">✓</span> Đề xuất mua hàng thông minh</li>
+                            <li><span class="feature-check">✓</span> Quản lý danh sách Nhà cung cấp</li>
+                            <li><span class="feature-check">✓</span> Lịch sử giá nhập biến động</li>
+                            <li><span class="feature-check">✓</span> Kế hoạch nhập hàng dự báo</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-details" data-service="transformation">
+                        <h3>Báo Cáo Thông Minh</h3>
+                        <div class="service-subtitle">Dữ liệu ra quyết định (Business Intelligence)</div>
+                        <p>Hệ thống báo cáo trực quan dạng biểu đồ giúp chủ doanh nghiệp nắm bắt tình hình sức khỏe công ty mọi lúc, mọi nơi.</p>
+                        <p>Phân tích xu hướng bán hàng, mặt hàng bán chạy/bán chậm để đưa ra chiến lược kinh doanh phù hợp.</p>
+                        <ul class="service-features">
+                            <li><span class="feature-check">✓</span> Dashboard trực quan (Biểu đồ)</li>
+                            <li><span class="feature-check">✓</span> Phân tích xu hướng doanh thu</li>
+                            <li><span class="feature-check">✓</span> Báo cáo hiệu quả nhân viên</li>
+                            <li><span class="feature-check">✓</span> Dự báo nhu cầu thị trường</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="services-tabs">
+                    <div class="service-tab active" data-target="strategy">
+                        <div class="tab-icon">📦</div>
+                        <div class="tab-content">
+                            <h4>Quản Lý Kho</h4>
+                            <p>Tồn kho, Mã vạch, Kiểm kê</p>
+                        </div>
+                    </div>
+                    <div class="service-tab" data-target="digital">
+                        <div class="tab-icon">🛒</div>
+                        <div class="tab-content">
+                            <h4>Bán Hàng & POS</h4>
+                            <p>Đa kênh, Thanh toán nhanh</p>
+                        </div>
+                    </div>
+                    <div class="service-tab" data-target="performance">
+                        <div class="tab-icon">💰</div>
+                        <div class="tab-content">
+                            <h4>Tài Chính</h4>
+                            <p>Doanh thu, Chi phí, Lãi lỗ</p>
+                        </div>
+                    </div>
+                    <div class="service-tab" data-target="market">
+                        <div class="tab-icon">👥</div>
+                        <div class="tab-content">
+                            <h4>Nhân Sự (HRM)</h4>
+                            <p>Chấm công, Tính lương</p>
+                        </div>
+                    </div>
+                    <div class="service-tab" data-target="innovation">
+                        <div class="tab-icon">🚚</div>
+                        <div class="tab-content">
+                            <h4>Mua Hàng</h4>
+                            <p>Nhà cung cấp, Nhập kho</p>
+                        </div>
+                    </div>
+                    <div class="service-tab" data-target="transformation">
+                        <div class="tab-icon">📊</div>
+                        <div class="tab-content">
+                            <h4>Báo Cáo (BI)</h4>
+                            <p>Phân tích dữ liệu, Biểu đồ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section about fade-in">
+            <div class="about-content">
+                <div class="highlight">Công Nghệ Cho Doanh Nghiệp Việt</div>
+                <h2>Giải Pháp ERP Thế Hệ Mới</h2>
+                <p>NexusERP được xây dựng bởi đội ngũ kỹ sư tâm huyết, với mục tiêu đơn giản hóa quy trình quản trị phức tạp cho các doanh nghiệp vừa và nhỏ (SME) tại Việt Nam.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">☁️</div>
+                        <div class="feature-text">Công nghệ Cloud An toàn</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-text">Đa nền tảng (Web/App)</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text">Triển khai siêu tốc</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">Bảo mật tuyệt đối</div>
+                    </div>
+                </div>
+                
+                <p>Chúng tôi không chỉ cung cấp phần mềm, chúng tôi cung cấp quy trình làm việc chuẩn giúp doanh nghiệp của bạn vận hành trơn tru như một cỗ máy được bôi trơn hoàn hảo.</p>
+            </div>
+            <div class="about-visual">
+                <div class="about-image">
+                    <div class="visual-shapes">
+                        <div class="visual-shape"></div>
+                        <div class="visual-shape"></div>
+                        <div class="visual-shape"></div>
+                    </div>
+                    <img src="images/about-image-01.jpg" alt="NexusERP Dashboard">
+                </div>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number counter" data-count="500">0</span>
+                        <span class="stat-label">Doanh nghiệp tin dùng</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number counter" data-count="15000">0</span>
+                        <span class="stat-label">User hoạt động</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number counter" data-count="99">0</span>
+                        <span class="stat-label">% Hài lòng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="section">
+            <h2 class="section-title fade-in">Đội Ngũ Chuyên Gia</h2>
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <img src="images/team-member-01.jpg" alt="Nguyễn Văn A" />
+                        </div>
+                        <div class="member-info">
+                            <h3>Trần Minh Hoàng</h3>
+                            <div class="member-role">CEO & Founder</div>
+                            <p>15 năm kinh nghiệm tư vấn giải pháp chuyển đổi số cho các tập đoàn bán lẻ hàng đầu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <img src="images/team-member-02.jpg" alt="Lê Thị B" />
+                        </div>
+                        <div class="member-info">
+                            <h3>Phạm Thanh Hằng</h3>
+                            <div class="member-role">Giám đốc Sản phẩm</div>
+                            <p>Chuyên gia thiết kế trải nghiệm người dùng (UX), đảm bảo phần mềm dễ sử dụng nhất.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <img src="images/team-member-03.jpg" alt="Nguyễn Văn C" />
+                        </div>
+                        <div class="member-info">
+                            <h3>Lê Quốc Bảo</h3>
+                            <div class="member-role">Giám đốc Kỹ thuật</div>
+                            <p>Kiến trúc sư hệ thống Cloud, chuyên về bảo mật dữ liệu và hiệu năng xử lý lớn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="section">
+            <h2 class="section-title fade-in">Khách Hàng Nói Về NexusERP</h2>
+            <div class="testimonials-container">
+                <div class="testimonial fade-in">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Từ khi áp dụng NexusERP, tỉ lệ thất thoát kho của chúng tôi giảm về gần như bằng 0. Việc kiểm kho cuối tháng giờ chỉ mất 2 tiếng thay vì 2 ngày như trước."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">NTV</div>
+                            <div class="author-info">
+                                <h4>Nguyễn Tường Vy</h4>
+                                <span>Chủ chuỗi thời trang VyStyle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial fade-in">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Giao diện bán hàng rất trực quan, nhân viên mới của tôi chỉ cần đào tạo 15 phút là dùng được ngay. Tính năng báo cáo trên điện thoại rất tiện lợi."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LHQ</div>
+                            <div class="author-info">
+                                <h4>Lê Hoàng Quân</h4>
+                                <span>Giám đốc Siêu thị MiniMart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial fade-in">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"NexusERP giúp tôi kết nối dữ liệu giữa bộ phận kế toán và kinh doanh. Dòng tiền được minh bạch hóa, giúp ban giám đốc ra quyết định nhanh hơn hẳn."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">TTA</div>
+                            <div class="author-info">
+                                <h4>Trần Tuấn Anh</h4>
+                                <span>CEO, Công ty Phân phối Ánh Dương</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section">
+            <h2 class="section-title fade-in">Liên Hệ Tư Vấn</h2>
+            <div class="contact-content">
+                <p>Bạn đã sẵn sàng tối ưu hóa doanh nghiệp? Hãy để lại thông tin, chuyên gia của NexusERP sẽ liên hệ demo giải pháp ngay.</p>
+                <form class="contact-form fade-in">
+                    <div class="form-group">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="tel" placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email công việc" required>
+                        <input type="text" placeholder="Tên Doanh nghiệp">
+                    </div>
+                    <textarea placeholder="Nhu cầu của bạn (Ví dụ: Quản lý kho, nhân sự, bán lẻ...)" required></textarea>
+                    <button type="submit" class="submit-btn">Đăng Ký Tư Vấn Miễn Phí</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Chính sách bảo mật</a>
+                <a href="#terms">Điều khoản sử dụng</a>
+                <a href="#careers">Tuyển dụng</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 NexusERP. Bảo lưu mọi quyền.
+            </div>
+            <div class="footer-design">
+                Thanks for help design homepage: <a href="https://www.tooplate.com" target="_blank">Tooplate</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/tooplate-strategic-scripts.js"></script>
+</body>
 </html>

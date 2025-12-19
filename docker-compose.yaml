@@ -3,6 +3,7 @@ services:
   nexus-db:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: nexus_db
+    user: root
     restart: always
     environment:
       - ACCEPT_EULA=Y
@@ -10,7 +11,7 @@ services:
     ports:
       - "1433:1433"
     volumes:
-      - sqlvolume:/var/opt/mssql/data  # Sửa: Dùng named volume để tránh lỗi quyền hạn
+      - sqlvolume:/var/opt/mssql/data # Sửa: Dùng named volume để tránh lỗi quyền hạn
 
   # 2. Backend API
   nexus-api:

@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\backend"
+    "\\backend",
+    "\\backend\\Nexus",
+    "\\backend\\Nexus\\Controllers"
   ],
-  "SelectedNode": "\\backend\\Nexus.sln",
+  "SelectedNode": "\\backend\\Nexus\\Controllers\\UsersController.cs",
   "PreviewInSolutionExplorer": false
 }

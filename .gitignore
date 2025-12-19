@@ -4,6 +4,7 @@ backend/**/obj/
 backend/**/.vs/
 backend/**/*.user
 backend/**/appsettings.Development.json
+backend/**/database.sql/
 
 # --- React Frontend (Thư viện nặng và file build) ---
 frontend/**/node_modules/
@@ -21,3 +22,4 @@ sql-data/
 # --- Logs & System ---
 *.log
 Thumbs.db
+
